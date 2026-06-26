@@ -214,3 +214,58 @@ function sumPrimes(start, end) {
 
 // Sample usage
 console.log(sumPrimes(10, 20)); // 60
+
+// 4 Tổng hợp vòng lặp For #4
+
+/**
+ * 1. Repeats a character for a given number of times.
+ * @param {string} character - The character to repeat.
+ * @param {number} n - The number of times to repeat the character.
+ * @returns {string} The repeated character string.
+ */
+function repeatChar(character, n) {
+    let result = "";
+    for (let i = 0; i < n; i++) {
+        result += character;
+    }
+    return result;
+}
+
+// Sample usage
+console.log(repeatChar("*", 5)); // *****
+console.log(repeatChar("a", 3)); // aaa
+console.log(repeatChar("b", 0)); // (empty string)
+
+/**
+ * 2. Converts an array of strings into an unordered list HTML string.
+ * @param {string[]} array - The array of strings to convert.
+ * @returns {string} An HTML string representing the array as an unordered list.
+ */
+function arrayToHTMLList(arr) {
+    let html = "";
+    for (let i = 0; i < arr.length; i++) {
+        html += `<li>${arr[i]}</li>`;
+    }
+    return `<ul>${html}</ul>`;
+}
+
+// Sample usage
+console.log(arrayToHTMLList(["HTML", "CSS", "JavaScript"]));
+// <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+
+/**
+ * 3. Performs a linear search for a target value within an array.
+ * @param {number[]} arr - The array to search through.
+ * @param {number} target - The value to search for.
+ * @returns {number} The index of the target if found, otherwise -1.
+ */
+function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) return i;
+    }
+    return -1;
+}
+
+// Sample usage
+console.log(linearSearch([5, 3, 7, 6, 2, 9], 6)); // 3
+console.log(linearSearch([5, 3, 7, 6, 2, 9], 10)); // -1
